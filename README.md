@@ -69,3 +69,6 @@ The model takes an image as input and generates a descriptive caption based on t
 2. Click "Generate Caption" to process the image
 3. View the generated caption
 4. Copy or share the caption as needed
+
+
+![image alt](https://github.com/benlalaraid/FlickrCaptionator/blob/main/SharedScreenshot.jpg?raw=true)
