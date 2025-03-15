@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flickr Caption Generator</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-camera-retro"></i>
+                <h1>Flickr Caption AI</h1>
+            </div>
+            <p class="tagline">Transform your images into stories with AI</p>
+        </header>
+
+        <main>
+            <div class="upload-container">
+                <div class="upload-area" id="drop-area">
+                    <div class="upload-content" id="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop your image here</p>
+                        <p class="or">- OR -</p>
+                        <label for="file-input" class="upload-btn">Choose File</label>
+                        <input type="file" id="file-input" accept="image/*" hidden>
+                    </div>
+                    <div class="preview-container" id="preview-container" style="display: none;">
+                        <img id="preview-image" src="" alt="Preview">
+                        <button id="change-image-btn" class="change-btn">
+                            <i class="fas fa-sync-alt"></i> Change Image
+                        </button>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="generate-btn" disabled>
+                    <span class="btn-text">Generate Caption</span>
+                    <span class="btn-icon"><i class="fas fa-magic"></i></span>
+                </button>
+            </div>
+
+            <div class="result-container" id="result-container" style="display: none;">
+                <div class="result-header">
+                    <h2>Generated Caption</h2>
+                    <div class="result-actions">
+                        <button id="copy-btn" class="action-btn" title="Copy to clipboard">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <button id="share-btn" class="action-btn" title="Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="caption-box">
+                    <p id="caption-text"></p>
+                </div>
+            </div>
+        </main>
+
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+            <p>Generating caption...</p>
+        </div>
+
+        <footer>
+            <p>Powered by AI & Deep Learning | <span id="current-year"></span></p>
+        </footer>
+    </div>
+
+    <div class="particles-container" id="particles-js"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
